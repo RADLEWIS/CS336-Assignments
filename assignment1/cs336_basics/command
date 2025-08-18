@@ -1,0 +1,12 @@
+# 激活uv
+source ~/cs336_venv/bin/activate
+
+# 运行测试文件
+uv run --active pytest tests/test_train_bpe.py
+uv run --active pytest tests/test_tokenizer.py
+uv run --active pytest -k test_linear
+# 调试代码
+uv run --active -m test
+
+# 训练模型文件
+uv run --active python cs336_basics/train_tokenizer.py
